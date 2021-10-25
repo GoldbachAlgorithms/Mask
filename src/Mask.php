@@ -1,13 +1,20 @@
 <?php
 
-namespace GoldbachAlgorithms;
+namespace GoldbachAlgorithms\Mask;
 
-use Constants;
+use GoldbachAlgorithms\Mask\Constants;
 
 class Mask
 {
-    const CEP = '#####-###';
-    const CPF = '###.###.###-##';
+    const FORMAT = [
+        "CEP" => "CEP",
+        "CPF" => "CPF"
+    ];
+    
+    const CODE = [
+        "CEP" => "#####-###",
+        "CPF" => "###.###.###-##"
+    ];
     
     public function transform(
         string $mask,
@@ -15,7 +22,7 @@ class Mask
     ) {
         $value = $this->clear($value);
         $value = $this->rewrite($mask, $value);
-        $value = $this->doIt($mask, $value);
+        $value = $this->doIt(self::CODE[$mask], $value);
         
         return $value;
     }
@@ -47,7 +54,7 @@ class Mask
         string $mask,
         string $value
     ):string {
-        return str_pad($value, Constants::LENGTH[$mask], "0", STR_PAD_LEFT);
+        return str_pad($value, Constants::LENGTH[self::FORMAT[$mask]], "0", STR_PAD_LEFT);
     }
 
     public function clear(
