@@ -2,53 +2,56 @@
 
 namespace GoldbachAlgorithms;
 
+use GoldbachAlgorithms\Mask\Constants;
+
 class Mask
 {
-    const CEP = '#####-###';
-
     public function transform(
         string $mask,
         string $value
-    ){
+    ) {
+        $value = $this->clear($value);
         $value = $this->rewrite($mask, $value);
+        $value = $this->doIt($mask, $value);
+        
+        return $value;
+    }
 
-        $maskared = '';
+    public function doIt(
+        string $mask,
+        string $value
+    ): string {
+        $masked = '';
 
         $k = 0;
             
-        for($i = 0; $i <= strlen($mask)-1; $i++) {
-            if($mask[$i] == '#') {
-                if(isset($value[$k])){
-                    $maskared .= $value[$k++];
-                }                
-            } 
-            else
-            {
-                if(isset($mask[$i]))
-                {
-                    $maskared .= $mask[$i];
+        for ($i = 0; $i <= strlen($mask)-1; $i++) {
+            if ($mask[$i] == '#') {
+                if (isset($value[$k])) {
+                    $masked .= $value[$k++];
+                }
+            } else {
+                if (isset($mask[$i])) {
+                    $masked .= $mask[$i];
                 }
             }
         }
-        
-        return $maskared;
-           
+
+        return $masked;
     }
 
     public function rewrite(
-        $mask,
-        $value
-    )
-    {
-        if($mask == self::CEP){
-            $value = str_replace('-','',$value);
-            return str_pad($value, 8, "0", STR_PAD_LEFT);
-        }
+        string $mask,
+        string $value
+    ):string {
+        return str_pad($value, self::LENGTH[$mask], "0", STR_PAD_LEFT);
     }
 
     public function clear(
         string $unmask
-    ){
-        return $unmask;
+    ):string {
+        $unmasked = preg_replace('/[\@\.\;\-\," "]+/', '', $unmask);
+        
+        return $unmasked;
     }
 }
