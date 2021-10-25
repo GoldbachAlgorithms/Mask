@@ -1,5 +1,7 @@
 <?php 
 
+namespace GoldbachAlgorithms\Mask;
+
 class Constants
 {
     /**
