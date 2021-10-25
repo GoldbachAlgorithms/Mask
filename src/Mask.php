@@ -2,10 +2,13 @@
 
 namespace GoldbachAlgorithms;
 
-use GoldbachAlgorithms\Mask\Constants;
+use Constants;
 
 class Mask
 {
+    const CEP = '#####-###';
+    const CPF = '###.###.###-##';
+    
     public function transform(
         string $mask,
         string $value
@@ -44,7 +47,7 @@ class Mask
         string $mask,
         string $value
     ):string {
-        return str_pad($value, self::LENGTH[$mask], "0", STR_PAD_LEFT);
+        return str_pad($value, Constants::LENGTH[$mask], "0", STR_PAD_LEFT);
     }
 
     public function clear(
