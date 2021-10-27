@@ -8,12 +8,18 @@ class Mask
 {
     const FORMAT = [
         "CEP" => "CEP",
-        "CPF" => "CPF"
+        "CPF" => "CPF",
+        "CNPJ" => "CNPJ"
     ];
+
+    const CEP = "CEP";
+    const CPF = "CPF";
+    const CNPJ = "CNPJ";
     
     const CODE = [
         "CEP" => "#####-###",
-        "CPF" => "###.###.###-##"
+        "CPF" => "###.###.###-##",
+        "CNPJ" => "##.###.###/####-##"
     ];
     
     public function transform(
