@@ -11,7 +11,7 @@ Goldbach Algorithms Mask (fondly nicknamed Gold Mask) is a PHP library developed
 Use the composer to install:
 
 ```bash
-composer require goldbach-algorithms/aig
+composer require goldbach-algorithms/mask
 ```
 
 ## Usage
