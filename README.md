@@ -54,4 +54,4 @@ $mask->custom('18031690','##/##/####');
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-Copyright © 2021 [Goldbach Algorithms](https://github.com/GoldbachAlgorithms/Mask/blob/main/LICENSE)
+Copyright © 2023 [Goldbach Algorithms](https://github.com/GoldbachAlgorithms/Mask/blob/main/LICENSE)
