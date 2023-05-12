@@ -1,11 +1,11 @@
 {
-    "name": "messer/mask",
+    "name": "goldbach-algorithms/mask",
     "description": "Mascarador de valores PHP",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Goldbach07",
+            "name": "Gustavo Messer",
             "email": "gustavoalves.a7@gmail.com"
         }
     ],
@@ -14,7 +14,5 @@
           "GoldbachAlgorithms\\Mask\\": "src/"
         }
       },
-    "require": {
-        "messer/mask": "^1.0"
-    }
+    "require": {}
 }
