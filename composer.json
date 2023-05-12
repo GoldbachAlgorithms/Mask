@@ -1,5 +1,5 @@
 {
-    "name": "goldbach-algorithms/mask",
+    "name": "messer/mask",
     "description": "Mascarador de valores PHP",
     "type": "library",
     "license": "MIT",
