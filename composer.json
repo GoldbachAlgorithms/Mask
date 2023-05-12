@@ -14,5 +14,7 @@
           "GoldbachAlgorithms\\Mask\\": "src/"
         }
       },
-    "require": {}
+    "require": {
+        "messer/mask": "^1.0"
+    }
 }
