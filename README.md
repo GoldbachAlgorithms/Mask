@@ -1,17 +1,17 @@
-# Gold Mask
+# Mask
 
 [<img src="https://badgen.net/badge/Powered%20by/Goldbach/red" />](https://github.com/Goldbach07/)
 [<img src="https://badgen.net/badge/Developed%20for/PHP/blue" />](https://www.php.net/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Goldbach Algorithms Mask (fondly nicknamed Gold Mask) is a PHP library developed for Symfony for apply a mask to values.
+Goldbach Algorithms Mask (old repository) is a PHP library developed for Symfony for apply a mask to values.
 
 ## Installation
 
 Use the composer to install:
 
 ```bash
-composer require goldbach-algorithms/mask
+composer require messer/mask
 ```
 
 ## Usage
